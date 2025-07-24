@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For My Love - Abhy</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+      background: url('assets/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      filter: blur(0px);
+    }
+    .overlay {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(6px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+    }
+    h1 {
+      font-size: 2.8em;
+      color: #00897b;
+      text-shadow: 0 0 10px #80cbc4;
+      animation: glow 2s ease-in-out infinite alternate;
+      text-align: center;
+    }
+    .button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 1em;
+      background-color: #4db6ac;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: #00897b;
+    }
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #80cbc4, 0 0 20px #4db6ac;
+      }
+      to {
+        text-shadow: 0 0 20px #26a69a, 0 0 30px #00897b;
+      }
+    }
+    .gallery {
+      display: none;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .gallery img {
+      width: 160px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>Hey Abhy 💙<br>You are the calm in my chaos</h1>
+    <button class="button" onclick="showSurprise()">💖 Tap to See a Surprise</button>
+    <button class="button" onclick="toggleGallery()">📷 View Our Memories</button>
+    <p id="surprise" style="display:none; margin-top:20px; color:#004d40; font-size:1.2em;">
+      If I had a flower for every time I thought of you...<br>I could walk through my garden forever.
+    </p>
+    <div class="gallery" id="gallery">
+<img src="assets/gallery/BC4E7B88-2E25-4491-8FC0-CD51AF78B4DC.jpeg" alt="Memory">
+<img src="assets/gallery/AA04B25D-0D78-4853-8432-13D7BF9E235D.jpeg" alt="Memory">
+<img src="assets/gallery/4E916247-46CF-48EF-BF78-1CB42682EF71.jpeg" alt="Memory">
+<img src="assets/gallery/0B2912FF-9055-41A9-B4EC-F77F7EDC2D0E.jpeg" alt="Memory">
+<img src="assets/gallery/62AC6A44-1535-456F-87BB-1CD4773C0D77.jpeg" alt="Memory">
+<img src="assets/gallery/63C5ECBE-F78E-45E7-9048-1EF809787668.jpeg" alt="Memory">
+<img src="assets/gallery/B3B0D44A-1834-4632-84F3-465DCA816F87.jpeg" alt="Memory">
+
+    </div>
+  </div>
+
+  <script>
+    function showSurprise() {
+      document.getElementById('surprise').style.display = 'block';
+    }
+    function toggleGallery() {
+      const gallery = document.getElementById('gallery');
+      gallery.style.display = gallery.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
+</body>
+</html>
